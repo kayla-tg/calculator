@@ -53,7 +53,7 @@ calculateButton.addEventListener('click', () => {
     } else {
         calculation.textContent =`${operandA} ${operator} ${operandB} = ${result}`
     }
-    calculations.appendChild(calculation)
+    calculations.prepend(calculation)
     lastResult.textContent = "result: " + result
 })
 

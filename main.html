@@ -5,28 +5,38 @@
     </head>
     <body>
         <script defer src="main.js"></script>
-        <div id="inputs">
-            <input id="operand-a">
-            <select id="operator">
-                <option value="+">+</option>
-                <option value="-">-</option>
-                <option value="*">*</option>
-                <option value="/">/</option>
-                <option value="%">%</option>
-            </select>
-        <input id="operand-b">
+        <div id="calculator">
+            <div id="screen">
+                <section id="output">
+                    <p id="lastResult">result: none</p>
+                    <section id="calculations"></section>
+                </section>
+            </div>
+            <div id="underscreen">
+                <div id="keys">
+                    <div id="left">
+                        <input id="operand-a">
+                        <input id="operand-b">
+                        <div id="buttons">
+                            <button id="clear">Clear</button>
+                            <button id="store">Store</button>
+                        </div>
+                    </div>
+                    <div id="right">
+                        <select id="operator">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                            <option value="%">%</option>
+                        </select>
+                        <button id="calculate">=</button>
+                    </div>
+                </div>
+                <div id="screen2">
+                    <p id="storedValue">stored: none</p>
+                </div>
+            </div>
         </div>
-        <br><br>
-        <div id="buttons">
-            <button id="calculate">Calculate</button>
-            <button id="store">Store</button>
-            <button id="clear">Clear</button>
-        </div>
-        <section id="output">
-            <p id="lastResult">result: none</p>
-            <p id="storedValue">stored: none</p>
-        </section>
-        <h4>Previous Calculations</h4>
-        <section id="calculations"></section>
     </body>
 </html>
