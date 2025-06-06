@@ -40,8 +40,8 @@ function solve(a, b, operator) {
 }
 
 calculateButton.addEventListener('click', () => {
-    let operandA = input1.value
-    let operandB = input2.value
+    let operandA = input1.value.trim()
+    let operandB = input2.value.trim()
     const operator = dropdown.value
     if (!operandA || !operandB) {return}
     if (operandA === "stored") {operandA = stored}
